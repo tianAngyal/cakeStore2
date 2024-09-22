@@ -1,0 +1,14 @@
+{
+  "root": "/Users/tian/Desktop/html/cakeProject",
+  "headers": [
+    {
+      "source": "./data.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    }
+  ]
+}
