@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "RedHatText-Regular";
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  // overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1.6em;
+}
+h1 {
+  font-size: 3.4em;
+}
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2.4em;
+}
+
+h4 {
+  font-size: 1.8em;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  padding: 8em 9em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: $white-primary;
+  column-gap: 5em;
+}
+
+.deserts {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  grid-template-rows: min-content repeat(3, 1fr);
+  gap: 30px;
+
+  & .title {
+    grid-column: 1 / span 3;
+    color: $primary-3;
+    font-family: "RedHatText-SemiBold";
+  }
+  & .desert-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
+.overflow-hidden {
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  h4 {
+    font-size: 1.6em;
+  }
+  p {
+    font-size: 1.3em;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+    padding: 8em 3em;
+  }
+  .deserts {
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: min-content repeat(4, 1fr);
+    & .title {
+      grid-column: 1 / span 2;
+    }
+  }
+  // .desert-card_image {
+  //   width: unset;
+  //   height: 20em;
+  // }
+  .desert-card_add-to-image {
+    width: unset;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .container {
+    grid-template-columns: 1fr min-content;
+    // display: block;
+    padding: 4em 0;
+    column-gap: 0;
+  }
+  .deserts {
+    grid-template-columns: repeat(1, min-content);
+    grid-template-rows: min-content repeat(9, 1fr);
+    margin-left: 4em;
+    gap: 15px;
+    & .title {
+      grid-column: 1 / -1;
+    }
+    & .desert-card {
+      margin-bottom: unset;
+    }
+    & .desert-card_image {
+      width: 27em;
+      height: unset;
+    }
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .deserts .desert-card_image {
+    width: 23em;
+    height: unset;
+  }
+}

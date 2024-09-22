@@ -1,0 +1,156 @@
+.check-out {
+  background-color: #fff;
+  padding: 2.5em 1em;
+  border-radius: 10px;
+  align-self: start;
+
+  &_title {
+    color: $primary-1;
+  }
+  &_icon {
+    margin: 0 auto;
+  }
+  &_text {
+    color: $primary-2;
+    margin: 0 auto;
+  }
+
+  &_item {
+    display: flex;
+    padding: 0.5em 1em;
+    justify-content: space-between;
+    & .removeItem {
+      display: flex;
+      padding: 0.25em;
+      background-color: unset;
+      align-self: center;
+      border: 1.5px solid #caafa7;
+      border-radius: 123px;
+      cursor: pointer;
+    }
+    &_separator {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      & .amount-info {
+        font-size: 1.4em;
+      }
+      & button {
+        width: 16px;
+        text-align: center;
+        height: 16px;
+        line-height: 13px;
+        border-radius: 123px;
+        border: 1px solid $primary-1;
+        align-self: center;
+        cursor: pointer;
+        background-color: unset;
+
+        & path {
+          fill: $primary-1;
+        }
+        &:hover {
+          background-color: unset;
+        }
+      }
+    }
+  }
+  & .order-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0.5em 0em 0.5em;
+    &_title {
+      align-self: center;
+    }
+    &_amount {
+      font-size: 2.6em;
+    }
+  }
+}
+
+.order-total_mobile {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6em;
+  position: relative;
+  top: 1em;
+  // border-top: 1px solid black;
+  padding-top: 1em;
+}
+.confirm {
+  background-color: $primary-1;
+  color: $white-primary;
+  border: none;
+  border-radius: 123px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 1em;
+  width: 100%;
+}
+
+.confirm_mobile {
+  margin-top: 1em;
+  position: relative;
+  top: 2em;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  position: sticky;
+  right: 1em;
+  top: 2em;
+  background-color: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+
+  &_cart {
+    width: 45px;
+    margin: 0 auto;
+    cursor: pointer;
+    transform: translate(7px);
+  }
+}
+.desktop {
+  flex-direction: column;
+  display: inline-flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.total-products {
+  position: absolute;
+  top: -30px;
+  right: 15px;
+  font-size: 14px;
+  width: 1.7em;
+  height: 1.7em;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  line-height: 23px;
+  border-radius: 123px;
+  font-weight: 600;
+  transform: translate(10px, 20px);
+  z-index: 2;
+  opacity: 1;
+}
+
+.tpanimation {
+  animation: tpAnimation 2s linear;
+}
+
+@keyframes tpAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
