@@ -1,8 +1,7 @@
 {
-  "root": "./",
   "headers": [
     {
-      "source": "./data.json",
+      "source": "/data.json",
       "headers": [
         {
           "key": "Content-Type",
